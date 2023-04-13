@@ -1,0 +1,6 @@
+El proyecto consta de   archivos .html, 1 carpetas media.
+- carpeta media donde se guarda las imagenes utilizadas en el proyecto.
+
+Archivos .php:
+- index.php es una pagina principal y de informacion.
+- web.html es una pagina que en la que se publican las tecnologías emergentes y últimas herramientas, en el entorno web
