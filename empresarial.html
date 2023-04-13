@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="tendencias_style.css">
     
 		<script>
-		function mostrarTexto() {
-			document.getElementById("texto").classList.add("estatico");
-		}
-	</script>
+      function mostrarTexto() {
+        var texto = document.getElementById("textoe");
+        texto.style.display = "block";
+      }
+  
+      function ocultarTexto() {
+        var texto = document.getElementById("textoe");
+        texto.style.display = "none";
+      }
+    </script>
     
 	</script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -53,21 +59,11 @@
 		<div id="texto">
             <p>El IoT sigue creciendo con la adopción de tecnologías emergentes como 5G y Edge Computing. La privacidad y seguridad de datos sigue siendo un desafío importante. La pandemia ha aumentado la demanda de soluciones IoT para el trabajo remoto y la monitorización de la salud.</p></div>
 	</div>
-  <div id="contenedor">
-		<img class="imagen" src="media/m1.jpg"
-        alt="INTERNET DE LAS COSAS">
-		<div id="texto">
-            <p>El IoT sigue creciendo con la adopción de tecnologías emergentes como 5G y Edge Computing. La privacidad y seguridad de datos sigue siendo un desafío importante. La pandemia ha aumentado la demanda de soluciones IoT para el trabajo remoto y la monitorización de la salud.</p></div>
-	</div>
   <br><br><br><br><br><br><br><br><br>
-  <!--button onclick="mostrarTexto() " class="btn btn-info boton">Información</button-->
-  <div id="contenedor2">
-		<img class="imagen" src="media/m2.jpg"
-        alt="BLOCKCHAIN">
-		<div id="texto2">
-            <p>Lo último que se sabe de blockchain es que sigue evolucionando y expandiéndose a nuevas áreas. Además de su uso en criptomonedas, se ha visto un creciente interés en la implementación de blockchain en la cadena de suministro, la gestión de identidad y la votación electrónica. También se ha visto un aumento en el uso de soluciones de blockchain por parte de grandes empresas y gobiernos. Se están explorando nuevas formas de mejorar la escalabilidad y la interoperabilidad de blockchain, y se están desarrollando nuevas soluciones de privacidad y seguridad para proteger los datos almacenados en la cadena de bloques. En resumen, la tecnología blockchain sigue siendo una tecnología emergente y prometedora con un gran potencial para transformar muchos aspectos de la sociedad y la economía.</p></div>
+  <div ><center>
+		<img class="imagen" src="media/m2.jpg" alt="Imagen" onmouseover="mostrarTexto()" onmouseout="ocultarTexto()">
+		<div class="textoe" id="textoe"><p>Lo último que se sabe de blockchain es que sigue evolucionando y expandiéndose a nuevas áreas. Además de su uso en criptomonedas, se ha visto un creciente interés en la implementación de blockchain en la cadena de suministro, la gestión de identidad y la votación electrónica. También se ha visto un aumento en el uso de soluciones de blockchain por parte de grandes empresas y gobiernos.</p></div></center>
 	</div>
-  <br><br><br><br><br><br><br><br><br>
 
 
 
