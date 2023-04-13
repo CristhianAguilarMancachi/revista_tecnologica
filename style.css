@@ -89,4 +89,28 @@
 .imagen-port:hover .hover-galeria{
     transform: scale(1);
 }
-
+.xd{
+    color: white;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(196, 65%, 22%, 0.459), hsla(184, 40%, 44%, 0.664)), url(../media/tecns.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(211, 65%, 22%, 0.459), hsla(185, 40%, 44%, 0.664)), url(../media/tecns.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.wave{
+    width: 100%;
+    height: 600px;
+    background: #F0EEED;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(196, 65%, 22%, 0.459), hsla(184, 40%, 44%, 0.664)), url(../media/tecns.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(211, 65%, 22%, 0.459), hsla(185, 40%, 44%, 0.664)), url(../media/tecns.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+}
