@@ -17,6 +17,37 @@
         var texto = document.getElementById("textoe");
         texto.style.display = "none";
       }
+
+      window.onload = function() {
+			var estrellas = document.getElementsByClassName("estrella");
+			for (var i = 0; i < estrellas.length; i++) {
+				estrellas[i].addEventListener("click", calificarPagina);
+				estrellas[i].addEventListener("mouseover", resaltarEstrellas);
+				estrellas[i].addEventListener("mouseout", quitarResaltadoEstrellas);
+			}
+		}
+
+		function resaltarEstrellas() {
+			var estrellaActual = parseInt(this.getAttribute("data-valor"));
+			for (var i = 1; i <= estrellaActual; i++) {
+				document.getElementById("estrella-" + i).classList.add("estrellaSeleccionada");
+			}
+		}
+
+		function quitarResaltadoEstrellas() {
+			var estrellaActual = parseInt(this.getAttribute("data-valor"));
+			for (var i = 1; i <= estrellaActual; i++) {
+				document.getElementById("estrella-" + i).classList.remove("estrellaSeleccionada");
+			}
+		}
+
+		function calificarPagina() {
+			var estrellaActual = parseInt(this.getAttribute("data-valor"));
+			document.getElementById("calificacion").value = estrellaActual;
+			for (var i = 1; i <= estrellaActual; i++) {
+				document.getElementById("estrella-" + i).classList.add("estrellaSeleccionada");
+			}
+		}
     </script>
     
 	</script>
@@ -26,6 +57,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/x-icon" href="media/book.svg ">
+
 </head>
 <body>
   <!-- Navbar -->
@@ -69,13 +101,33 @@
         alt="blockchain">
 		<div id="texto2">
             <p>Lo último que se sabe de blockchain es que sigue evolucionando y expandiéndose a nuevas áreas. Además de su uso en criptomonedas, se ha visto un creciente interés en la implementación de blockchain en la cadena de suministro, la gestión de identidad y la votación electrónica. También se ha visto un aumento en el uso de soluciones de blockchain por parte de grandes empresas y gobiernos.</p></div>
+            <br><br><br>
 	</div>
-  <br><br><br><br><br><br><br><br><br>
+
+  
+  <div><center>
+    <br><br><br>
+    <h2>Calificar la información que te brindamos</h2>
+	<h4>Por favor, seleccione una calificación:</h4>
+	<div>
+		<span class="estrella" id="estrella-1" data-valor="1">&#9733;</span>
+		<span class="estrella" id="estrella-2" data-valor="2">&#9733;</span>
+		<span class="estrella" id="estrella-3" data-valor="3">&#9733;</span>
+		<span class="estrella" id="estrella-4" data-valor="4">&#9733;</span>
+		<span class="estrella" id="estrella-5" data-valor="5">&#9733;</span>
+	</div>
+	<form>
+		<input type="hidden" id="calificacion" name="calificacion">
+		<input type="submit" value="Calificar" class="btn btn-success">
+	</form>
+
+</center>
+  </div>
 
 
 
 
-  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br>
   <!-- Footer -->
   <footer class="custom-bg-footer mt-5 py-3">
     <div class="container text-center">
