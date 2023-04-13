@@ -1,0 +1,38 @@
+body{
+    background-image: url("https://fondosmil.com/fondo/12535.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #f3eeee;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 0;
+}
+#contenedor {
+    position: relative;
+    display: inline-block;
+}
+
+#texto {
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    padding: 10px;
+    background-color: white;
+    color: gray;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 12px;
+    display: none;
+}
+
+#contenedor:hover #texto {
+    display: block;
+}
+
+#texto.estatico {
+    display: block;
+    right: auto;
+}
